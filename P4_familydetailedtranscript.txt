@@ -1,0 +1,48 @@
+?- consult('familyquery.pl').
+true.
+
+?- not_related(ahmed, yusuf).
+true, ahmed IS related to yusuf
+true.
+
+?- not_related(sahra, omar).
+true, sahra IS related to omar
+true.
+
+?- not_related(abdi, john).
+false, abdi is NOT related to john
+true.
+
+?- not_related(john, david).
+true, john IS related to david
+true.
+
+?- teen_parent().
+Parent: mariam Child: ahmed Age: 19
+true ;
+Parent: sahra Child: yusuf Age: 19
+true ;
+Parent: aisha Child: abdi Age: 19
+true ;
+Parent: emily Child: alex Age: 18
+true ;
+Parent: jill Child: lucy Age: -3
+true ;
+Parent: jill Child: david Age: -4
+true ;
+false.
+
+?- younger_than_child().
+Parent: jill 2003 Child: lucy 2000
+true ;
+Parent: jill 2003 Child: david 1999
+true ;
+false.
+
+?- count_adults(C).
+19 adults. 
+C = 19.
+
+?- count_older_aunt_or_uncle(C).
+2 Aunts/Uncles are younger than their Nieces/Nephews. 
+C = 2.

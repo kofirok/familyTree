@@ -1,0 +1,54 @@
+?- consult('familyquery.pl').
+true.
+
+?- who_parent().
+Parent: mohamed Child: ahmed
+true ;
+Parent: mariam Child: ahmed
+true ;
+Parent: ahmed Child: sahra
+true ;
+Parent: ahmed Child: hamza
+true ;
+Parent: fatima Child: sahra
+true ;
+Parent: fatima Child: hamza
+true ;
+Parent: sahra Child: yusuf
+true ;
+Parent: sahra Child: hafsa
+true ;
+Parent: ali Child: yusuf
+true ;
+Parent: ali Child: hafsa
+true ;
+Parent: hamza Child: abdi
+true ;
+Parent: hamza Child: zainab
+true ;
+Parent: hamza Child: omar
+true ;
+Parent: aisha Child: abdi
+true ;
+Parent: aisha Child: zainab
+true ;
+Parent: aisha Child: omar
+true.
+
+?- mohamed_ahmed_father().
+true .
+
+?- mariam_sahra_grandma().
+true .
+
+?- ahmed_fatima_married().
+true .
+
+?- zainab_omar_brother().
+false.
+
+?- fatima_omar_uncle().
+false.
+
+?- zainab_hafsa_cousin().
+true .
